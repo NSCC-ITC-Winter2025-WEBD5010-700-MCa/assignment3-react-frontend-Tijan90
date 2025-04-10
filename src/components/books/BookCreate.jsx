@@ -12,7 +12,7 @@ const BookCreate = () => {
     const createBookMutation = useMutation({
         mutationFn: async (data) => {
             console.log(data)
-            const response = await fetch(`http://localhost:3000/books`, {
+            const response = await fetch(`${ import.meta.env.VITE_API_URL }`, {
               method: 'POST',
               headers: {'Content-Type' : 'application/json'},
               body: JSON.stringify(data)
